@@ -1,5 +1,5 @@
 const input = document.querySelector("#validation-input");
-
+const validNumber = parseInt(input.dataset.length);
 input.addEventListener("blur", isValidInputValue2);
 
 // Якщо не потрыбно вертати в почакове положеня......
@@ -15,8 +15,8 @@ input.addEventListener("blur", isValidInputValue2);
 
 function isValidInputValue2(event) {
   let classListToChenge = input.classList;
-  switch (event.currentTarget.value.length) {
-    case 6:
+  switch (event.currentTarget.value.trim().length) {
+    case validNumber:
       classListToChenge.replace("invalid", "valid") ||
         classListToChenge.add("valid");
       break;
@@ -26,7 +26,6 @@ function isValidInputValue2(event) {
       break;
 
     default:
-      classListToChenge.replace("valid", "invalid") ||
-        classListToChenge.add("invalid");
+      classListToChenge.add("invalid");
   }
 }

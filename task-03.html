@@ -9,12 +9,21 @@
 
     <style>
       .gallery {
-        width: fit-content;
+        margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
       }
+      .gallery-item {
+        list-style: none;
+      }
+      img {
+        height: 150px;
+        flex-basis: calc((100% - 60px) / 3);
+       }
     </style>
   </head>
   <body>

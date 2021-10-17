@@ -3,10 +3,9 @@ const loginForm = document.querySelector(".login-form");
 loginForm.addEventListener("submit", vilidationOfLoginForm);
 
 function vilidationOfLoginForm(event) {
-  console.dir(event.currentTarget.elements);
   event.preventDefault();
   const email = event.currentTarget.elements.email.value;
-  const password = event.currentTarget.elements.value;
+  const password = event.currentTarget.elements.password.value;
   const formData = {
     email,
     password,
